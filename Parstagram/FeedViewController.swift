@@ -15,6 +15,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
 
    var posts = [PFObject]()
    var refreshControl: UIRefreshControl!
+   var numberOfPost: Int!
    
    override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,10 +32,30 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
    override func viewDidAppear(_ animated: Bool) {
       super.viewDidAppear(animated)
 
+      numberOfPost = 20
+
       let query = PFQuery(className: "Post")
       query.order(byDescending: "createdAt")
       query.includeKey("author")
-      query.limit = 20
+      query.limit = numberOfPost
+
+      query.findObjectsInBackground { (posts, error) in
+         if posts != nil{
+            self.posts = posts!
+            self.tableView.reloadData()
+         }
+      }
+
+   }
+
+   //function to load more posts
+   func loadMorePosts(){
+      numberOfPost = numberOfPost + 20
+
+      let query = PFQuery(className: "Post")
+      query.order(byDescending: "createdAt")
+      query.includeKey("author")
+      query.limit = numberOfPost
 
       query.findObjectsInBackground { (posts, error) in
          if posts != nil{
@@ -79,6 +100,13 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
        let queue = DispatchQueue.main
        queue.asyncAfter(deadline: DispatchTime.now() + wait, execute: closure)
    }
+
+   //when user gets the end of page, will load more posts
+   func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+         if indexPath.row + 1 == posts.count {
+            loadMorePosts()
+         }
+      }
 
     /*
     // MARK: - Navigation
