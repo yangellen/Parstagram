@@ -23,4 +23,4 @@ The following **bonus** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-![Video Walkthroug](https://github.com/yangellen/gifs/blob/master/DZr2QpmTje.gif%20(363%C3%97730).webloc) 
+![Video Walkthroug](https://github.com/yangellen/gifs/blob/master/DZr2QpmTje.gif) 
