@@ -23,4 +23,4 @@ The following **bonus** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-![Video Walkthroug](https://github.com/yangellen/gifs/blob/master/DZr2QpmTje.gif) 
+<img src="http://g.recordit.co/quAqAEf5bf.gif" width=250><br>
