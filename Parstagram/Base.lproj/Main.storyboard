@@ -128,13 +128,13 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ellen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9hJ-Dw-77J">
-                                                    <rect key="frame" x="8" y="480" width="36.333333333333336" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="8" y="480" width="39.333333333333336" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Spring is almsot here!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0dr-RC-ZYM">
-                                                    <rect key="frame" x="51.999999999999986" y="480" width="164.66666666666663" height="21"/>
+                                                    <rect key="frame" x="54.999999999999986" y="480" width="164.66666666666663" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -158,6 +158,42 @@
                                             <outlet property="captionLabel" destination="0dr-RC-ZYM" id="fnw-5g-dEc"/>
                                             <outlet property="photoView" destination="gzU-ks-w4c" id="jSD-9O-BHB"/>
                                             <outlet property="usernameLabel" destination="9hJ-Dw-77J" id="bzx-oq-9R2"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommentCell" id="en6-fX-2bV" customClass="CommentCell" customModule="Parstagram" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="537" width="414" height="36.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="en6-fX-2bV" id="saU-aq-w5x">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="36.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ellen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ove-Nf-zYC">
+                                                    <rect key="frame" x="16.000000000000004" y="7.9999999999999982" width="39.333333333333343" height="20.333333333333329"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a comment!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQX-r2-frg">
+                                                    <rect key="frame" x="63.333333333333329" y="7.9999999999999982" width="143.33333333333337" height="20.333333333333329"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="UQX-r2-frg" firstAttribute="leading" secondItem="Ove-Nf-zYC" secondAttribute="trailing" constant="8" id="4J2-WE-CvV"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Ove-Nf-zYC" secondAttribute="bottom" constant="8" id="LAx-Yz-uQm"/>
+                                                <constraint firstItem="Ove-Nf-zYC" firstAttribute="top" secondItem="saU-aq-w5x" secondAttribute="top" constant="8" id="Uxd-sO-hFF"/>
+                                                <constraint firstItem="UQX-r2-frg" firstAttribute="top" secondItem="saU-aq-w5x" secondAttribute="top" constant="8" id="Vao-Bq-DIo"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="UQX-r2-frg" secondAttribute="bottom" constant="8" id="f9q-Tt-yyW"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="UQX-r2-frg" secondAttribute="trailing" constant="8" id="mqv-Pd-r5h"/>
+                                                <constraint firstItem="Ove-Nf-zYC" firstAttribute="leading" secondItem="saU-aq-w5x" secondAttribute="leading" constant="16" id="vVf-a4-ev6"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.99355453406491234" green="0.93058092652885782" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <outlet property="commentLabel" destination="UQX-r2-frg" id="8IS-6J-l8S"/>
+                                            <outlet property="nameLabel" destination="Ove-Nf-zYC" id="NDM-cl-S11"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
