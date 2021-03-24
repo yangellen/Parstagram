@@ -118,4 +118,16 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     */
 
+   @IBAction func onLogoutButton(_ sender: Any) {
+      PFUser.logOut()
+
+      let main = UIStoryboard(name: "Main", bundle: nil)
+      let loginViewController = main.instantiateViewController(identifier: "LoginViewController")
+
+      let delegate = UIApplication.shared.connectedScenes.first!.delegate as! SceneDelegate
+
+      delegate.window?.rootViewController = loginViewController
+   }
+
+
 }
