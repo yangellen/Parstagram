@@ -122,6 +122,34 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C529A9E6265F418B00661943 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				C5A1624B260408AB00438C9C /* Main.storyboard */,
+				C5A16250260408AC00438C9C /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		C529A9EA265F41B700661943 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C5A1628B2604481300438C9C /* CameraViewController.swift */,
+				C5A1628126041B8600438C9C /* LoginViewController.swift */,
+				C5A1628626041BA400438C9C /* FeedViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C529A9EE265F421900661943 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C5D2C882260BA66700883088 /* CommentCell.swift */,
+				C5277EAC26052ED200389C85 /* PostCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		C5A16239260408AB00438C9C = {
 			isa = PBXGroup;
 			children = (
@@ -147,17 +175,13 @@
 		C5A16244260408AB00438C9C /* Parstagram */ = {
 			isa = PBXGroup;
 			children = (
+				C529A9EE265F421900661943 /* Cells */,
+				C529A9EA265F41B700661943 /* Controller */,
+				C529A9E6265F418B00661943 /* Storyboard */,
 				C5A16245260408AB00438C9C /* AppDelegate.swift */,
 				C5A16247260408AB00438C9C /* SceneDelegate.swift */,
-				C5A1624B260408AB00438C9C /* Main.storyboard */,
 				C5A1624E260408AC00438C9C /* Assets.xcassets */,
-				C5A16250260408AC00438C9C /* LaunchScreen.storyboard */,
 				C5A16253260408AC00438C9C /* Info.plist */,
-				C5A1628126041B8600438C9C /* LoginViewController.swift */,
-				C5A1628626041BA400438C9C /* FeedViewController.swift */,
-				C5A1628B2604481300438C9C /* CameraViewController.swift */,
-				C5277EAC26052ED200389C85 /* PostCell.swift */,
-				C5D2C882260BA66700883088 /* CommentCell.swift */,
 			);
 			path = Parstagram;
 			sourceTree = "<group>";
